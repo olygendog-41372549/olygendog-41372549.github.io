@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>红果短剧-热门短剧推荐_短剧榜单_免费短剧在线观看解析</title>
+  <meta name="description" content="红果短剧专题页聚合热门短剧推荐、短剧榜单与深度解析。覆盖都市逆袭、古装甜宠、悬疑反转等题材，提供追剧指南、用户评论与最新短剧资讯，帮你快速找到值得看的红果短剧。">
+  <meta name="keywords" content="红果短剧,热门短剧推荐,短剧榜单,免费短剧,短剧解析">
+  <style>
+    :root {
+      --bg: #0d0f1a;
+      --bg-soft: #14172a;
+      --card: #1c1f34;
+      --card-hover: #232742;
+      --border: #2e3250;
+      --text: #e8eaf2;
+      --text-soft: #a4a9c4;
+      --accent: #ff5e7c;
+      --accent2: #7b6cff;
+      --accent3: #2dd4bf;
+      --glow: 0 0 25px rgba(255, 94, 124, 0.25);
+      --radius: 18px;
+      --max: 1200px;
+      --font: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+    .rb-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* header */
+    .rb-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(13, 15, 26, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .rb-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .rb-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -0.5px;
+    }
+    .rb-logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: var(--glow);
+    }
+    .rb-nav {
+      display: flex;
+      gap: 26px;
+      font-size: 0.92rem;
+      color: var(--text-soft);
+    }
+    .rb-nav a:hover {
+      color: var(--accent);
+    }
+    /* banner */
+    .rb-banner {
+      padding: 70px 0 50px;
+      background: radial-gradient(circle at 80% 20%, rgba(123, 108, 255, 0.22), transparent 55%),
+                  radial-gradient(circle at 15% 70%, rgba(255, 94, 124, 0.16), transparent 50%);
+      border-bottom: 1px solid var(--border);
+    }
+    .rb-banner-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .rb-banner h1 {
+      font-size: 2.8rem;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .rb-banner h1 span {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .rb-banner-desc {
+      color: var(--text-soft);
+      margin: 18px 0 24px;
+      font-size: 1.02rem;
+      max-width: 540px;
+    }
+    .rb-search {
+      display: flex;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 60px;
+      padding: 6px 6px 6px 22px;
+      max-width: 480px;
+      align-items: center;
+      gap: 10px;
+    }
+    .rb-search input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+    .rb-search button {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .rb-quick-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+    .rb-quick-tags a {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 6px 16px;
+      border-radius: 40px;
+      transition: 0.2s;
+    }
+    .rb-quick-tags a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .rb-banner-visual {
+      background: linear-gradient(160deg, #1b1e33, #0f1120);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 34px 28px;
+      box-shadow: 0 30px 60px -30px rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .rb-mini-card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--border);
+    }
+    .rb-mini-card strong {
+      font-size: 0.95rem;
+    }
+    .rb-badge {
+      font-size: 0.7rem;
+      background: rgba(255, 94, 124, 0.15);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    /* section common */
+    .rb-section {
+      padding: 60px 0;
+    }
+    .rb-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .rb-section-head h2 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .rb-section-head h2 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .rb-section-head p {
+      color: var(--text-soft);
+      font-size: 0.9rem;
+    }
+    /* card grid */
+    .rb-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .rb-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      border: 1px solid var(--border);
+      transition: 0.25s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .rb-card:hover {
+      transform: translateY(-4px);
+      background: var(--card-hover);
+      border-color: #3d4268;
+      box-shadow: 0 20px 30px -20px rgba(0,0,0,0.6);
+    }
+    .rb-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .rb-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .rb-tag {
+      font-size: 0.7rem;
+      padding: 2px 9px;
+      border-radius: 20px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+    }
+    .rb-card p {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      flex: 1;
+    }
+    .rb-meta {
+      font-size: 0.72rem;
+      color: #6b7194;
+      display: flex;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    /* list style */
+    .rb-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 20px;
+    }
+    .rb-list-item:last-child {
+      border-bottom: none;
+    }
+    .rb-list-item .rb-li-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .rb-list-item .rb-li-desc {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+    }
+    .rb-list-item .rb-li-time {
+      font-size: 0.78rem;
+      color: var(--accent3);
+      white-space: nowrap;
+    }
+    /* category */
+    .rb-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .rb-cat-item {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .rb-cat-item:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .rb-cat-item span {
+      color: var(--text-soft);
+      font-weight: 400;
+      font-size: 0.78rem;
+    }
+    /* deep article */
+    .rb-article {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 40px 44px;
+    }
+    .rb-article h3 {
+      font-size: 1.25rem;
+      margin: 24px 0 10px;
+      color: var(--accent);
+    }
+    .rb-article p {
+      color: var(--text-soft);
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    /* guide */
+    .rb-guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .rb-guide-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+    .rb-guide-card h4 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .rb-guide-card p {
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+    /* faq */
+    .rb-faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 26px;
+      margin-bottom: 14px;
+    }
+    .rb-faq-item h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .rb-faq-item p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+    /* comment */
+    .rb-comment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .rb-comment {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .rb-comment .rb-user {
+      font-weight: 600;
+      color: var(--accent3);
+      margin-bottom: 6px;
+      font-size: 0.82rem;
+    }
+    .rb-comment p {
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+    .rb-comment .rb-c-time {
+      font-size: 0.7rem;
+      color: #5f6584;
+    }
+    /* news */
+    .rb-news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .rb-news-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+    .rb-news-card h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .rb-news-card .rb-news-date {
+      font-size: 0.75rem;
+      color: var(--accent3);
+      margin-bottom: 10px;
+    }
+    .rb-news-card p {
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+    /* footer */
+    .rb-footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0 30px;
+      color: var(--text-soft);
+      font-size: 0.82rem;
+    }
+    .rb-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .rb-footer a {
+      color: var(--text-soft);
+      margin-right: 16px;
+    }
+    .rb-footer a:hover {
+      color: var(--accent);
+    }
+    /* responsive */
+    @media (max-width: 960px) {
+      .rb-banner-grid {
+        grid-template-columns: 1fr;
+      }
+      .rb-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .rb-cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .rb-guide-grid {
+        grid-template-columns: 1fr;
+      }
+      .rb-comment-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .rb-news-grid {
+        grid-template-columns: 1fr;
+      }
+      .rb-article {
+        padding: 28px 22px;
+      }
+    }
+    @media (max-width: 640px) {
+      .rb-nav {
+        display: none;
+      }
+      .rb-grid-4 {
+        grid-template-columns: 1fr;
+      }
+      .rb-cat-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .rb-comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .rb-banner h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ff5e7c'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3E红%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="rb-header">
+  <div class="rb-wrap rb-header-inner">
+    <a href="/#top" class="rb-logo">
+      <span class="rb-logo-mark">红</span> 红果短剧
+    </a>
+    <nav class="rb-nav">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#new">最新更新</a>
+      <a href="/#category">分类索引</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">短剧资讯</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="rb-banner" id="top">
+  <div class="rb-wrap rb-banner-grid">
+    <div>
+      <h1>红果短剧 · <span>短剧专题推荐</span></h1>
+      <p class="rb-banner-desc">
+        聚合热门红果短剧榜单、题材分类与深度解析，每集几分钟，爽点密集反转不断。无论你是通勤碎片时间还是睡前放松，这里都能找到对味的短剧。
+      </p>
+      <div class="rb-search">
+        <input type="text" placeholder="搜索短剧名 / 演员 / 题材…" aria-label="搜索短剧">
+        <button>搜短剧</button>
+      </div>
+      <div class="rb-quick-tags">
+        <a href="/#hot">都市逆袭</a>
+        <a href="/#hot">古装甜宠</a>
+        <a href="/#hot">悬疑反转</a>
+        <a href="/#new">今日更新</a>
+        <a href="/#ranking">热播榜</a>
+        <a href="/#category">新剧速递</a>
+        <a href="/#comments">剧迷讨论</a>
+        <a href="/#deep">短剧解析</a>
+      </div>
+    </div>
+    <div class="rb-banner-visual">
+      <div class="rb-mini-card">
+        <strong>🔥 逆袭人生</strong>
+        <span class="rb-badge">热度 9821</span>
+      </div>
+      <div class="rb-mini-card">
+        <strong>💘 闪婚后爱</strong>
+        <span class="rb-badge">新剧上线</span>
+      </div>
+      <div class="rb-mini-card">
+        <strong>🕵️ 迷雾追凶</strong>
+        <span class="rb-badge">更新至12集</span>
+      </div>
+      <div class="rb-mini-card">
+        <strong>🏆 本周短剧榜</strong>
+        <span class="rb-badge">查看榜单 →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="rb-section" id="intro">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>关于<em>红果短剧</em>专题</h2>
+      <p>短剧消费指南 · 追剧不迷路</p>
+    </div>
+    <div class="rb-article">
+      <p>
+        红果短剧作为当下热门的短剧内容形态，以单集几分钟、节奏紧凑、反转密集著称。用户搜索“红果短剧”，往往希望快速找到值得看的短剧作品、了解热门短剧榜单、或获取某部短剧的剧情解析和观看入口。本专题页正是围绕这些需求搭建：从热门推荐到最新更新，从题材分类到深度解析，帮助短剧用户在碎片化时间内高效选剧。
+      </p>
+      <p>
+        本页适合喜欢快节奏叙事、追求爽点与情绪价值的观众，也适合刚接触短剧、想了解“红果短剧”有什么可看内容的新用户。我们整理了都市逆袭、古装甜宠、悬疑反转、豪门虐恋等主流题材的短剧推荐，并附上模拟热度和更新状态，方便你判断哪些剧值得点开。页面中的深度解析部分会从叙事节奏、角色塑造、情绪钩子等角度拆解短剧的吸引力，而 FAQ 和用户评论则呈现真实追剧场景中的常见疑问和讨论氛围。
+      </p>
+      <p>
+        短剧的消费场景通常是通勤、午休、睡前，因此“哪部剧开局抓人”“哪部剧更新快”“哪部剧结局不烂尾”是用户最关心的点。本专题页通过榜单推荐、更新追踪和社区评论三个维度，为红果短剧爱好者提供一个可持续收藏和回访的浏览入口。建议把本页加入书签，后续有新剧上线或榜单变化时，可以快速回到这里查看。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门内容推荐 -->
+<section class="rb-section" id="hot">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>热门<em>红果短剧</em>推荐</h2>
+      <p>编辑精选 · 高热度短剧合集</p>
+    </div>
+    <div class="rb-grid-4">
+      <div class="rb-card">
+        <h3>逆袭从离婚开始</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">都市</span><span class="rb-tag">逆袭</span><span class="rb-tag">爽剧</span>
+        </div>
+        <p>女主净身出户后觉醒商业天赋，前夫追悔莫及。前3集完成身份反转，情绪释放密集。</p>
+        <div class="rb-meta"><span>🔥 9821</span><span>更新至28集</span></div>
+      </div>
+      <div class="rb-card">
+        <h3>闪婚后大佬天天宠</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">甜宠</span><span class="rb-tag">先婚后爱</span><span class="rb-tag">豪门</span>
+        </div>
+        <p>相亲闪婚却嫁给了隐藏首富，日常撒糖加身份揭晓双线推进，适合下饭观看。</p>
+        <div class="rb-meta"><span>🔥 8760</span><span>已完结</span></div>
+      </div>
+      <div class="rb-card">
+        <h3>迷雾追凶</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">悬疑</span><span class="rb-tag">反转</span><span class="rb-tag">短剧</span>
+        </div>
+        <p>一桩旧案牵出多重身份，每集结尾留钩子，适合喜欢推理和反转的观众。</p>
+        <div class="rb-meta"><span>🔥 7930</span><span>更新至12集</span></div>
+      </div>
+      <div class="rb-card">
+        <h3>穿书后我成了反派王妃</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">古装</span><span class="rb-tag">穿书</span><span class="rb-tag">甜爽</span>
+        </div>
+        <p>现代社畜穿进古言小说，靠吐槽和反套路改写命运，喜剧节奏轻松解压。</p>
+        <div class="rb-meta"><span>🔥 7215</span><span>更新至20集</span></div>
+      </div>
+      <div class="rb-card">
+        <h3>重生之千金归来</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">重生</span><span class="rb-tag">复仇</span><span class="rb-tag">豪门</span>
+        </div>
+        <p>前世被至亲背叛，重生后步步为营。剧情推进快，打脸情节密集。</p>
+        <div class="rb-meta"><span>🔥 6840</span><span>更新至35集</span></div>
+      </div>
+      <div class="rb-card">
+        <h3>我的老板是隐藏大佬</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">职场</span><span class="rb-tag">逆袭</span><span class="rb-tag">轻喜</span>
+        </div>
+        <p>小职员意外发现老板双重身份，职场成长线与感情线并行，节奏轻快。</p>
+        <div class="rb-meta"><span>🔥 6120</span><span>更新至18集</span></div>
+      </div>
+      <div class="rb-card">
+        <h3>神医下山</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">都市</span><span class="rb-tag">爽文</span><span class="rb-tag">医武</span>
+        </div>
+        <p>隐世高手入世，医武双修解决各种麻烦。典型男频爽剧，打脸节奏稳。</p>
+        <div class="rb-meta"><span>🔥 5890</span><span>更新至42集</span></div>
+      </div>
+      <div class="rb-card">
+        <h3>夜色倾心</h3>
+        <div class="rb-tag-row">
+          <span class="rb-tag">虐恋</span><span class="rb-tag">都市</span><span class="rb-tag">情感</span>
+        </div>
+        <p>误会与错过交织的都市虐恋，情绪浓度高，适合喜欢强情感冲突的观众。</p>
+        <div class="rb-meta"><span>🔥 5340</span><span>已完结</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="rb-section" id="new">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>最新<em>短剧</em>更新动态</h2>
+      <p>2026年11月7日 · 追更速览</p>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">逆袭从离婚开始</div><div class="rb-li-desc">第28集已上线，女主商业版图再扩张，前夫家族开始反击。</div></div>
+      <span class="rb-li-time">11-07</span>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">迷雾追凶</div><div class="rb-li-desc">第12集更新，关键证人身份反转，真凶线索浮出水面。</div></div>
+      <span class="rb-li-time">11-07</span>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">穿书后我成了反派王妃</div><div class="rb-li-desc">第20集上线，女主与王爷联手破局，甜度升级。</div></div>
+      <span class="rb-li-time">11-06</span>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">闪婚后大佬天天宠</div><div class="rb-li-desc">全剧完结，大结局身份揭晓，番外篇预告已放出。</div></div>
+      <span class="rb-li-time">11-06</span>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">重生之千金归来</div><div class="rb-li-desc">第35集更新，复仇计划进入收网阶段，反派开始内讧。</div></div>
+      <span class="rb-li-time">11-05</span>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">我的老板是隐藏大佬</div><div class="rb-li-desc">第18集上线，办公室修罗场名场面出圈。</div></div>
+      <span class="rb-li-time">11-05</span>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">神医下山</div><div class="rb-li-desc">第42集更新，医术比试剧情高能，弹幕讨论热烈。</div></div>
+      <span class="rb-li-time">11-04</span>
+    </div>
+    <div class="rb-list-item">
+      <div><div class="rb-li-title">夜色倾心</div><div class="rb-li-desc">完结后热度不减，名场面混剪在短剧社区持续传播。</div></div>
+      <span class="rb-li-time">11-03</span>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="rb-section" id="category">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>短剧<em>分类索引</em></h2>
+      <p>按题材快速找剧</p>
+    </div>
+    <div class="rb-cat-grid">
+      <a href="/#hot" class="rb-cat-item">都市逆袭 <span>热度最高</span></a>
+      <a href="/#hot" class="rb-cat-item">古装甜宠 <span>下饭首选</span></a>
+      <a href="/#hot" class="rb-cat-item">悬疑反转 <span>烧脑推荐</span></a>
+      <a href="/#hot" class="rb-cat-item">豪门虐恋 <span>情绪浓度高</span></a>
+      <a href="/#hot" class="rb-cat-item">重生复仇 <span>爽点密集</span></a>
+      <a href="/#hot" class="rb-cat-item">穿书系统 <span>设定新颖</span></a>
+      <a href="/#hot" class="rb-cat-item">职场成长 <span>轻喜剧</span></a>
+      <a href="/#hot" class="rb-cat-item">医武爽文 <span>男频热门</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="rb-section" id="deep">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2><em>红果短剧</em>深度解析</h2>
+      <p>为什么短剧让人停不下来</p>
+    </div>
+    <div class="rb-article">
+      <h3>短剧的节奏逻辑：前三集定生死</h3>
+      <p>
+        红果短剧最显著的特征是节奏极快。传统电视剧用一集铺垫人物关系，短剧往往在前三集就完成冲突建立、身份反转和情绪释放。以《逆袭从离婚开始》为例，第一集交代婚姻破裂，第二集完成觉醒，第三集就开始打脸反击。这种压缩式叙事让观众在碎片时间内快速获得情绪满足，也解释了为什么短剧用户黏性高、完播率好。对于搜索“红果短剧”的用户来说，理解这个节奏逻辑，有助于判断自己适合哪类短剧：如果你想快速解压，选逆袭爽剧；如果你偏好细水长流，可以选情感线更长的甜宠剧。
+      </p>
+      <h3>题材与受众的匹配关系</h3>
+      <p>
+        短剧题材高度细分，不同题材对应不同情绪需求。都市逆袭类主打“翻身”爽感，核心观众是希望看到小人物对抗不公的群体；古装甜宠类强调“被偏爱”的情绪价值，适合放松场景；悬疑反转类满足推理欲，每集结尾的钩子设计尤其关键；豪门虐恋类则提供高浓度情感冲突。红果短剧的推荐逻辑通常会把题材标签放在显眼位置，用户可以根据自己当下的情绪状态快速选择。本页推荐卡片中标注的题材标签，就是帮助用户缩短决策路径的设计。
+      </p>
+      <h3>角色塑造：标签化但有效</h3>
+      <p>
+        短剧角色往往带有鲜明标签：废物赘婿、落魄千金、隐藏首富、穿书反派。标签化不是缺点，而是短剧在有限时长内快速建立认知的手段。观众不需要复杂的人物前史，只需要知道“这个人现在处于什么位置、接下来会怎么翻盘”。优秀的短剧会在标签基础上加一层反差，比如“看似废柴实则神医”，这种反差就是爽点的来源。评价一部短剧是否好看，可以看它在标签之外有没有给角色一两个记忆点，比如一句口头禅、一个标志性动作。
+      </p>
+      <h3>免费短剧与付费解锁的消费差异</h3>
+      <p>
+        用户搜索红果短剧时，经常关心“哪里能看”“免不免费”。目前短剧分发渠道多样，部分平台采用前若干集免费、后续解锁的模式，也有平台提供全集免费观看。对于观众来说，选择短剧时除了看题材，也可以关注更新节奏和完结状态：追更中的短剧适合每天花几分钟跟进，已完结短剧适合一次性刷完。本页的更新动态和榜单信息，就是为了帮助用户判断哪部剧值得投入时间。需要提醒的是，不同平台的观看规则可能变化，建议以实际页面说明为准。
+      </p>
+      <h3>短剧与长剧的互补关系</h3>
+      <p>
+        短剧不是长剧的替代品，而是消费场景的补充。长剧适合周末整块时间沉浸，短剧适合通勤、排队、午休等碎片场景。很多用户会在追长剧的间隙用短剧换换口味，或者把短剧当作睡前放松的轻内容。红果短剧专题页的价值，就在于把这些分散的短剧信息聚合起来，让用户不用在多个平台之间反复切换搜索。如果你已经看腻了某一种题材，不妨从本页的分类入口换一个类型试试，也许会有新的追剧动力。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="rb-section" id="guide">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>浏览与追剧<em>体验指南</em></h2>
+      <p>让找剧更高效</p>
+    </div>
+    <div class="rb-guide-grid">
+      <div class="rb-guide-card">
+        <h4>📱 移动端友好</h4>
+        <p>页面采用响应式布局，手机端自动调整为单列或双列卡片，阅读不费眼，通勤路上也能快速浏览短剧推荐。</p>
+      </div>
+      <div class="rb-guide-card">
+        <h4>🔖 收藏回访方便</h4>
+        <p>把本页加入书签，每次想找新短剧时回到这里，热门推荐和更新动态会持续变化，减少重复搜索成本。</p>
+      </div>
+      <div class="rb-guide-card">
+        <h4>🧭 分类筛选清晰</h4>
+        <p>通过题材分类入口快速缩小范围，配合卡片上的热度、更新状态和标签，判断哪部短剧符合当前观看需求。</p>
+      </div>
+      <div class="rb-guide-card">
+        <h4>💬 参考真实讨论</h4>
+        <p>用户评论区提供不同观众的追剧反馈，既有推荐也有吐槽，帮助你避开不合口味的剧，发现被低估的短剧。</p>
+      </div>
+      <div class="rb-guide-card">
+        <h4>📊 数据辅助判断</h4>
+        <p>热门推荐卡片中的模拟热度和更新信息，可以作为选剧参考，但不能完全代表质量，建议结合简介和评论综合判断。</p>
+      </div>
+      <div class="rb-guide-card">
+        <h4>🔗 相关推荐延伸</h4>
+        <p>看完一部短剧后，可以通过相关推荐和同类题材入口继续浏览，减少“看完一部不知道看什么”的空窗感。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="rb-section" id="faq">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>红果短剧<em>常见问题</em></h2>
+      <p>追剧前你可能想知道</p>
+    </div>
+    <div class="rb-faq-item">
+      <h4>红果短剧一般每集多长时间？</h4>
+      <p>大多数红果短剧单集时长在1到3分钟之间，部分剧情密度较高的作品会到5分钟左右。这种时长设计适合碎片化观看，通勤、排队、午休都能刷上几集。由于单集短，剧情推进速度比传统剧集快很多，通常前几集就会进入核心冲突。</p>
+    </div>
+    <div class="rb-faq-item">
+      <h4>第一次看红果短剧，推荐从什么题材入手？</h4>
+      <p>如果是第一次接触短剧，建议从都市逆袭或古装甜宠开始。这两类题材理解门槛低、爽点直接，容易快速进入状态。如果你喜欢动脑，可以尝试悬疑反转类；如果偏好情感浓度高的内容，豪门虐恋类更对味。本页热门推荐卡片按题材做了标注，可以按兴趣点开。</p>
+    </div>
+    <div class="rb-faq-item">
+      <h4>短剧更新频率是怎样的？</h4>
+      <p>不同短剧的更新节奏差异较大，常见模式包括每日更新多集、每周集中更新、以及一次性放出全集。追更型用户建议关注本页“最新更新”栏目，我们会整理近期有更新的短剧动态。已完结的短剧则适合一次性刷完，不用等待。</p>
+    </div>
+    <div class="rb-faq-item">
+      <h4>红果短剧和普通电视剧有什么区别？</h4>
+      <p>核心区别在节奏和消费场景。短剧单集短、冲突密集、反转频繁，追求在最短时间内提供情绪价值；普通电视剧叙事更从容，人物成长线更完整。两者并不冲突，很多观众会把短剧当作长剧之外的调剂，或者用短剧填补碎片时间。</p>
+    </div>
+    <div class="rb-faq-item">
+      <h4>在哪里可以观看红果短剧？</h4>
+      <p>短剧分发渠道较多，不同作品可能上线不同平台。建议通过正规应用商店搜索相关短剧平台，或在短剧社区查看具体作品的观看说明。本页仅提供内容推荐和解析，不直接提供播放源，具体观看方式请以官方渠道信息为准。</p>
+    </div>
+    <div class="rb-faq-item">
+      <h4>如何判断一部红果短剧值不值得看？</h4>
+      <p>可以从三个角度判断：一是题材是否对味，二是更新状态是否适合你的追剧习惯，三是评论区口碑。热度高不一定适合所有人，但热度长期靠前的作品通常在节奏和爽点设计上比较成熟。建议先看前几集试水，再决定是否继续。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评论 -->
+<section class="rb-section" id="comments">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>短剧<em>用户评论</em></h2>
+      <p>来自追剧社区的真实声音</p>
+    </div>
+    <div class="rb-comment-grid">
+      <div class="rb-comment"><div class="rb-user">追剧小马达</div><p>逆袭从离婚开始真的上头，本来只想看一集结果刷到凌晨。前夫一家被打脸的时候太解气了。</p><div class="rb-c-time">11-06</div></div>
+      <div class="rb-comment"><div class="rb-user">桂花拿铁</div><p>闪婚后大佬天天宠完结了，番外什么时候出？最后一集身份揭晓有点仓促，但整体甜度够。</p><div class="rb-c-time">11-06</div></div>
+      <div class="rb-comment"><div class="rb-user">夜航星</div><p>迷雾追凶第12集那个反转没猜到，编剧有点东西。就是更新太慢了，等得心累。</p><div class="rb-c-time">11-05</div></div>
+      <div class="rb-comment"><div class="rb-user">橘子汽水</div><p>穿书后我成了反派王妃是最近的下饭剧，女主吐槽太真实了，王爷人设也讨喜。</p><div class="rb-c-time">11-05</div></div>
+      <div class="rb-comment"><div class="rb-user">不熬夜星人</div><p>短剧真的不能睡前看，说好只看一集，结果一集接一集停不下来。建议设置闹钟。</p><div class="rb-c-time">11-04</div></div>
+      <div class="rb-comment"><div class="rb-user">老剧迷阿康</div><p>重生之千金归来节奏比想象中稳，复仇线没有乱开金手指，反派智商在线，难得。</p><div class="rb-c-time">11-04</div></div>
+      <div class="rb-comment"><div class="rb-user">奶糖不加冰</div><p>我的老板是隐藏大佬的办公室修罗场笑死我了，轻喜剧定位很准确，适合放松。</p><div class="rb-c-time">11-03</div></div>
+      <div class="rb-comment"><div class="rb-user">键盘侠客</div><p>神医下山看到42集有点疲了，套路开始重复。前20集节奏确实好，后面注水感明显。</p><div class="rb-c-time">11-03</div></div>
+      <div class="rb-comment"><div class="rb-user">晚风信箱</div><p>夜色倾心完结后劲有点大，误会桥段虽然老但演员情绪到位，看哭了两次。</p><div class="rb-c-time">11-02</div></div>
+      <div class="rb-comment"><div class="rb-user">短剧挖掘机</div><p>希望这个专题页多更新点冷门好剧，热门的基本都看过了，想找点不一样的。</p><div class="rb-c-time">11-02</div></div>
+      <div class="rb-comment"><div class="rb-user">一颗小行星</div><p>古装甜宠类最近有点多，质量参差不齐。选剧还是要看评论区，光看简介容易踩坑。</p><div class="rb-c-time">11-01</div></div>
+      <div class="rb-comment"><div class="rb-user">追更不追星</div><p>更新动态这个栏目挺实用的，一目了然知道哪些剧有更新，不用一个个平台翻。</p><div class="rb-c-time">11-01</div></div>
+      <div class="rb-comment"><div class="rb-user">南山南</div><p>悬疑短剧最怕烂尾，迷雾追凶希望结局能收住，目前铺垫还不错。</p><div class="rb-c-time">10-31</div></div>
+      <div class="rb-comment"><div class="rb-user">咸鱼翻身</div><p>男频爽剧看多了也能总结出套路，但就是忍不住想看，可能这就是短剧的魅力吧。</p><div class="rb-c-time">10-31</div></div>
+      <div class="rb-comment"><div class="rb-user">抹茶小方</div><p>分类索引做得清楚，按题材找剧方便很多。建议再加个按更新状态筛选的功能。</p><div class="rb-c-time">10-30</div></div>
+      <div class="rb-comment"><div class="rb-user">光影之间</div><p>短剧演员其实挺考验演技的，情绪要快速切换，有些演员的爆发力比长剧还强。</p><div class="rb-c-time">10-30</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 相关资讯 -->
+<section class="rb-section" id="news">
+  <div class="rb-wrap">
+    <div class="rb-section-head">
+      <h2>红果短剧<em>相关资讯</em></h2>
+      <p>行业动态与内容观察</p>
+    </div>
+    <div class="rb-news-grid">
+      <div class="rb-news-card">
+        <h4>短剧市场持续升温，精品化趋势明显</h4>
+        <div class="rb-news-date">2026-11-06</div>
+        <p>近期多部红果短剧在制作水准上明显提升，从服化道到镜头语言都更接近长剧标准，观众对短剧的质量预期也在提高。</p>
+      </div>
+      <div class="rb-news-card">
+        <h4>悬疑短剧成新增长点，反转设计成核心竞争力</h4>
+        <div class="rb-news-date">2026-11-05</div>
+        <p>《迷雾追凶》等悬疑向短剧热度走高，观众对逻辑严密、反转合理的内容付费意愿更强，推动短剧题材进一步细分。</p>
+      </div>
+      <div class="rb-news-card">
+        <h4>短剧出海加速，古装甜宠类海外表现亮眼</h4>
+        <div class="rb-news-date">2026-11-04</div>
+        <p>多部古装甜宠短剧在海外平台获得较高播放量，文化差异较小的情感题材成为短剧出海的第一梯队。</p>
+      </div>
+      <div class="rb-news-card">
+        <h4>用户追剧习惯调研：碎片时间仍是主场景</h4>
+        <div class="rb-news-date">2026-11-03</div>
+        <p>最新调研显示，超过六成短剧用户习惯在通勤和午休时间观看，单次观看时长集中在10到20分钟。</p>
+      </div>
+      <div class="rb-news-card">
+        <h4>短剧评论社区活跃度上升，口碑影响选剧决策</h4>
+        <div class="rb-news-date">2026-11-02</div>
+        <p>越来越多用户在下单追剧前先看评论区反馈，短剧社区的真实讨论正在成为影响作品热度的重要因素。</p>
+      </div>
+      <div class="rb-news-card">
+        <h4>本周短剧榜单更新：逆袭题材重回榜首</h4>
+        <div class="rb-news-date">2026-11-01</div>
+        <p>都市逆袭类短剧热度回升，《逆袭从离婚开始》凭借稳定的更新节奏和密集爽点重新回到榜单首位。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="rb-footer">
+  <div class="rb-wrap">
+    <div class="rb-footer-inner">
+      <div>
+        <p style="font-weight:600;color:var(--text);margin-bottom:6px;">红果短剧 · 内容专题页</p>
+        <p>聚合热门短剧推荐、榜单解析与追剧讨论，为短剧爱好者提供选剧参考。</p>
+        <p style="margin-top:12px;">© 2026 红果短剧专题 · 内容仅供浏览参考</p>
+      </div>
+      <div>
+        <p><a href="/#hot">热门推荐</a><a href="/#new">最新更新</a><a href="/#category">分类索引</a><a href="/#faq">常见问题</a></p>
+        <p style="margin-top:8px;"><a href="/#comments">用户评论</a><a href="/#news">相关资讯</a><a href="/#deep">深度解析</a><a href="/#guide">体验指南</a></p>
+        <p style="margin-top:12px;font-size:0.75rem;">免责声明：本页内容为短剧主题信息聚合与模拟推荐，不提供播放服务。短剧观看渠道及规则请以官方平台为准。友情链接：短剧社区 · 剧评专栏 · 内容观察</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+                                                                                                                                                  </html>
