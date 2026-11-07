@@ -1,0 +1,1326 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>红果短剧下载-短剧资源合集_热门短剧在线看</title>
+  <meta name="description" content="红果短剧下载专题页：聚合热门短剧资源、更新动态与观看指南，提供红果短剧下载相关资讯、类型解析和用户推荐，帮助短剧爱好者快速找到想看的内容。">
+  <meta name="keywords" content="红果短剧下载,短剧资源合集,热门短剧在线看,短剧更新动态,短剧推荐">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-page: #f7f4ef;
+      --bg-card: #ffffff;
+      --bg-soft: #f2ede6;
+      --ink-primary: #1e1b18;
+      --ink-secondary: #4f4a45;
+      --ink-tertiary: #7b736b;
+      --accent: #c44b20;
+      --accent-soft: #fae9e2;
+      --accent-deep: #9a3512;
+      --border-light: #e5ddd4;
+      --shadow-sm: 0 2px 8px rgba(30, 27, 24, 0.04);
+      --shadow-md: 0 6px 18px rgba(30, 27, 24, 0.06);
+      --radius-card: 14px;
+      --radius-banner: 20px;
+      --max-width: 1200px;
+      --font-stack: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      font-family: var(--font-stack);
+      color: var(--ink-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .rg-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 顶部导航 */
+    .rg-navbar {
+      background-color: var(--bg-card);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rg-navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 0;
+    }
+
+    .rg-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .rg-logo-icon {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(145deg, #d95e2e, #b13a15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .rg-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+    }
+
+    .rg-nav-links a {
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .rg-nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Banner 区域 */
+    .rg-hero {
+      margin: 28px 0 20px;
+      background: linear-gradient(120deg, #fff8f3 0%, #fdf0e8 100%);
+      border-radius: var(--radius-banner);
+      padding: 40px 36px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid #f0e3d8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rg-hero::after {
+      content: "▶";
+      position: absolute;
+      right: -10px;
+      bottom: -20px;
+      font-size: 180px;
+      color: rgba(196, 75, 32, 0.045);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .rg-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink-primary);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .rg-hero h1 span {
+      color: var(--accent);
+    }
+
+    .rg-hero-desc {
+      max-width: 640px;
+      font-size: 1.05rem;
+      color: var(--ink-secondary);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .rg-search-box {
+      display: flex;
+      max-width: 540px;
+      background: #fff;
+      border-radius: 60px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 22px;
+      overflow: hidden;
+    }
+
+    .rg-search-box input {
+      flex: 1;
+      padding: 14px 20px;
+      border: none;
+      outline: none;
+      font-size: 0.95rem;
+      background: transparent;
+      color: var(--ink-primary);
+    }
+
+    .rg-search-box input::placeholder {
+      color: #a89f96;
+    }
+
+    .rg-search-box button {
+      background: var(--accent);
+      border: none;
+      padding: 0 28px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: default;
+      letter-spacing: 0.02em;
+    }
+
+    .rg-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+    }
+
+    .rg-hero-tags a {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+      font-weight: 500;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rg-hero-tags a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* 通用 section */
+    .rg-section {
+      margin: 48px 0;
+    }
+
+    .rg-section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .rg-section-header h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink-primary);
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .rg-section-header h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 4px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .rg-section-header .rg-more-link {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+      border-bottom: 1px dashed var(--accent-soft);
+      padding-bottom: 2px;
+    }
+
+    /* 卡片网格 */
+    .rg-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .rg-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rg-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .rg-card-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+      color: var(--ink-primary);
+    }
+
+    .rg-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      font-size: 0.78rem;
+      color: var(--ink-tertiary);
+      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    .rg-badge {
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      padding: 2px 10px;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.72rem;
+    }
+
+    .rg-card-desc {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+      margin-bottom: 14px;
+      flex: 1;
+      line-height: 1.6;
+    }
+
+    .rg-card-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--ink-tertiary);
+      border-top: 1px solid var(--border-light);
+      padding-top: 12px;
+      margin-top: auto;
+    }
+
+    /* 横向列表卡片（更新列表） */
+    .rg-update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rg-update-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-light);
+      transition: background 0.15s;
+    }
+
+    .rg-update-item:last-child {
+      border-bottom: none;
+    }
+
+    .rg-update-item:hover {
+      background: #fdfaf7;
+    }
+
+    .rg-update-time {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      min-width: 86px;
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    .rg-update-content {
+      flex: 1;
+    }
+
+    .rg-update-content strong {
+      font-size: 1rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .rg-update-content p {
+      font-size: 0.88rem;
+      color: var(--ink-tertiary);
+    }
+
+    /* 分类入口 */
+    .rg-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .rg-cat-item {
+      background: var(--bg-card);
+      border-radius: 50px;
+      padding: 14px 12px;
+      text-align: center;
+      border: 1px solid var(--border-light);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--ink-secondary);
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rg-cat-item:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* 深度解析正文 */
+    .rg-article-box {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 36px 40px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rg-article-box h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--ink-primary);
+    }
+
+    .rg-article-box h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .rg-article-box p {
+      font-size: 0.98rem;
+      color: var(--ink-secondary);
+      margin-bottom: 18px;
+      line-height: 1.85;
+    }
+
+    /* FAQ 双栏 */
+    .rg-faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .rg-faq-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 20px 24px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rg-faq-q {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--ink-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rg-faq-q::before {
+      content: "Q";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-weight: 800;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .rg-faq-a {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+      line-height: 1.7;
+      padding-left: 32px;
+    }
+
+    /* 评论 */
+    .rg-comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .rg-comment-item {
+      background: var(--bg-card);
+      border-radius: 50px 14px 14px 50px;
+      padding: 16px 24px 16px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rg-comment-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #f0d5c0, #e6c2a8);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #9a5a34;
+      font-size: 1.1rem;
+    }
+
+    .rg-comment-body {
+      flex: 1;
+    }
+
+    .rg-comment-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 14px;
+      margin-bottom: 4px;
+    }
+
+    .rg-comment-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .rg-comment-date {
+      font-size: 0.75rem;
+      color: var(--ink-tertiary);
+    }
+
+    .rg-comment-text {
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+
+    /* 资讯卡片 */
+    .rg-news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .rg-news-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 22px 24px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .rg-news-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .rg-news-date {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .rg-news-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .rg-news-summary {
+      font-size: 0.86rem;
+      color: var(--ink-tertiary);
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    .rg-footer {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-light);
+      margin-top: 60px;
+      padding: 40px 0 28px;
+    }
+
+    .rg-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .rg-footer-brand {
+      max-width: 320px;
+    }
+
+    .rg-footer-brand .rg-logo {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .rg-footer-brand p {
+      font-size: 0.84rem;
+      color: var(--ink-tertiary);
+      line-height: 1.7;
+    }
+
+    .rg-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .rg-footer-col h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .rg-footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .rg-footer-col a {
+      font-size: 0.84rem;
+      color: var(--ink-tertiary);
+    }
+
+    .rg-footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .rg-footer-bottom {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.78rem;
+      color: var(--ink-tertiary);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .rg-hero h1 {
+        font-size: 1.9rem;
+      }
+      .rg-faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .rg-news-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .rg-cat-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .rg-article-box {
+        padding: 24px 22px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .rg-container {
+        padding: 0 16px;
+      }
+      .rg-hero {
+        padding: 28px 18px;
+      }
+      .rg-hero h1 {
+        font-size: 1.6rem;
+      }
+      .rg-search-box {
+        flex-direction: column;
+        border-radius: 20px;
+      }
+      .rg-search-box input {
+        padding: 14px 18px;
+      }
+      .rg-search-box button {
+        padding: 12px 0;
+        border-radius: 0 0 20px 20px;
+      }
+      .rg-card-grid {
+        grid-template-columns: 1fr;
+      }
+      .rg-news-grid {
+        grid-template-columns: 1fr;
+      }
+      .rg-cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .rg-update-item {
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+      }
+      .rg-update-time {
+        min-width: auto;
+        width: fit-content;
+      }
+      .rg-comment-item {
+        border-radius: 20px;
+        padding: 16px;
+      }
+      .rg-navbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .rg-footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    /* 滚动条美化 */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d5cbc2;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-page);
+    }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c44b20'/%3E%3Cpath d='M12 8 L24 16 L12 24 Z' fill='%23fff'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="rg-navbar">
+    <div class="rg-container rg-navbar-inner">
+      <div class="rg-logo">
+        <span class="rg-logo-icon">果</span>
+        <span>红果短剧下载</span>
+      </div>
+      <nav class="rg-nav-links">
+        <a href="/#hot-picks">热门推荐</a>
+        <a href="/#latest-update">最新更新</a>
+        <a href="/#category-entry">分类入口</a>
+        <a href="/#deep-analysis">深度解析</a>
+        <a href="/#faq-area">常见问题</a>
+        <a href="/#user-comments">用户评论</a>
+        <a href="/#news-feed">相关资讯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="rg-container">
+
+    <!-- Banner -->
+    <section class="rg-hero" id="hero-banner">
+      <h1>红果短剧下载 · 热门短剧资源一站式发现</h1>
+      <p class="rg-hero-desc">
+        想找红果短剧下载的靠谱入口？这里聚合近期热门短剧、更新动态与观看指南，帮你快速定位想追的剧集。
+        从都市逆袭到古装甜宠，从悬疑反转 to 家庭伦理，每天都有新内容上线。
+      </p>
+      <div class="rg-search-box">
+        <input type="text" placeholder="搜索短剧名称、演员或类型…" aria-label="搜索短剧">
+        <button type="button">搜索</button>
+      </div>
+      <div class="rg-hero-tags">
+        <a href="/#hot-picks">都市逆袭</a>
+        <a href="/#hot-picks">古装甜宠</a>
+        <a href="/#hot-picks">悬疑反转</a>
+        <a href="/#latest-update">今日更新</a>
+        <a href="/#category-entry">完结短剧</a>
+        <a href="/#deep-analysis">短剧评测</a>
+        <a href="/#news-feed">行业动态</a>
+        <a href="/#faq-area">下载指南</a>
+      </div>
+    </section>
+
+    <!-- 内容简介 -->
+    <section class="rg-section" id="intro-section">
+      <div class="rg-section-header">
+        <h2>关于红果短剧下载，你需要知道这些</h2>
+      </div>
+      <div class="rg-article-box">
+        <p>
+          红果短剧下载是近期短剧爱好者频繁搜索的关键词，背后反映的是用户对优质短剧内容的强烈需求。短剧以单集时长几分钟、节奏快、反转密集著称，非常适合碎片化时间观看。红果短剧平台聚合了大量制作精良的竖屏短剧，涵盖都市情感、古装穿越、悬疑推理、家庭伦理等多种题材。用户搜索红果短剧下载，通常是想找到稳定的观看渠道，或是想了解哪些短剧值得下载收藏。本页面正是围绕这一需求，整理了热门剧集推荐、更新动态、类型解析和用户真实反馈，帮助你在海量内容中快速筛选。
+        </p>
+        <p>
+          如果你是刚接触短剧的新观众，这里会告诉你从哪些类型入手更容易找到兴趣点；如果你是资深追剧用户，页面的最新更新和深度解析能帮你节省筛选时间。红果短剧下载相关的资讯和常见问题也能解答你在观看过程中的疑惑。页面内容会持续紧跟短剧市场的更新节奏，建议收藏本页，方便随时回来查看新内容。
+        </p>
+        <p>
+          需要说明的是，本站为内容聚合与推荐专题页面，不直接提供文件下载，所有短剧信息均来自公开渠道整理，旨在为短剧爱好者提供参考。红果短剧下载的具体方式和渠道请以官方应用商店或正规平台为准。
+        </p>
+      </div>
+    </section>
+
+    <!-- 热门内容推荐 -->
+    <section class="rg-section" id="hot-picks">
+      <div class="rg-section-header">
+        <h2>热门短剧推荐 · 红果短剧下载人气榜</h2>
+        <a href="/#hot-picks" class="rg-more-link">查看更多 →</a>
+      </div>
+      <div class="rg-card-grid">
+        <article class="rg-card">
+          <div class="rg-card-title">《闪婚后傅先生马甲藏不住了》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">都市甜宠</span>
+            <span>更新至48集</span>
+            <span>评分 9.2</span>
+          </div>
+          <p class="rg-card-desc">先婚后爱+马甲反转，女主从普通职员到隐藏大佬的身份揭晓过程爽感十足，傅先生追妻火葬场名场面密集。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 2.8万</span>
+            <span>📺 红果独播</span>
+          </div>
+        </article>
+        <article class="rg-card">
+          <div class="rg-card-title">《病娇反派他又宠又撩》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">古装甜虐</span>
+            <span>完结·32集</span>
+            <span>评分 8.9</span>
+          </div>
+          <p class="rg-card-desc">穿书题材搭配病娇男主设定，女主靠系统任务逆天改命，感情线又甜又带感，适合喜欢强情节的观众。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 2.1万</span>
+            <span>📺 红果热播</span>
+          </div>
+        </article>
+        <article class="rg-card">
+          <div class="rg-card-title">《重生之我在豪门当保姆》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">都市逆袭</span>
+            <span>更新至36集</span>
+            <span>评分 8.7</span>
+          </div>
+          <p class="rg-card-desc">重生复仇线清晰，女主从底层保姆一步步揭开豪门阴谋，节奏快、反转多，适合喜欢爽剧的用户。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 1.9万</span>
+            <span>📺 红果短剧</span>
+          </div>
+        </article>
+        <article class="rg-card">
+          <div class="rg-card-title">《深夜诊所》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">悬疑推理</span>
+            <span>更新至24集</span>
+            <span>评分 9.0</span>
+          </div>
+          <p class="rg-card-desc">单元剧形式，每集一个离奇病例，主线暗藏惊天秘密。氛围营造到位，适合喜欢烧脑剧情的观众。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 1.7万</span>
+            <span>📺 红果悬疑</span>
+          </div>
+        </article>
+        <article class="rg-card">
+          <div class="rg-card-title">《我家夫人是隐藏大佬》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">都市爽剧</span>
+            <span>完结·40集</span>
+            <span>评分 8.5</span>
+          </div>
+          <p class="rg-card-desc">女主多重身份设定，从被轻视到全场震惊的反转桥段处理得干脆利落，适合碎片时间一口气刷完。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 1.6万</span>
+            <span>📺 红果独播</span>
+          </div>
+        </article>
+        <article class="rg-card">
+          <div class="rg-card-title">《穿越之我在古代开外卖》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">古装轻喜</span>
+            <span>更新至28集</span>
+            <span>评分 8.3</span>
+          </div>
+          <p class="rg-card-desc">现代外卖小哥穿越古代靠美食生意逆袭，轻松搞笑中带着经营爽感，适合下饭观看。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 1.4万</span>
+            <span>📺 红果短剧</span>
+          </div>
+        </article>
+        <article class="rg-card">
+          <div class="rg-card-title">《她的危险丈夫》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">悬疑情感</span>
+            <span>更新至20集</span>
+            <span>评分 8.8</span>
+          </div>
+          <p class="rg-card-desc">婚姻悬疑题材，女主发现丈夫身份疑点重重，每集都在推翻前一集的认知，紧张感持续在线。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 1.3万</span>
+            <span>📺 红果热播</span>
+          </div>
+        </article>
+        <article class="rg-card">
+          <div class="rg-card-title">《重回1998》</div>
+          <div class="rg-card-meta">
+            <span class="rg-badge">年代重生</span>
+            <span>完结·36集</span>
+            <span>评分 8.6</span>
+          </div>
+          <p class="rg-card-desc">主角重生回九十年代末，靠时代记忆改变家庭命运，怀旧氛围浓厚，情感线真挚不狗血。</p>
+          <div class="rg-card-footer">
+            <span>🔥 热度 1.2万</span>
+            <span>📺 红果短剧</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="rg-section" id="latest-update">
+      <div class="rg-section-header">
+        <h2>最新更新动态 · 今日短剧上新</h2>
+      </div>
+      <div class="rg-update-list">
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月07日 20:00</span>
+          <div class="rg-update-content">
+            <strong>《闪婚后傅先生马甲藏不住了》</strong>
+            <p>更新第48集 · 傅先生身份在宴会上被意外揭穿，全场震动，后续追妻剧情进入高潮。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月07日 18:30</span>
+          <div class="rg-update-content">
+            <strong>《深夜诊所》</strong>
+            <p>更新第24集 · 主线秘密首次浮出水面，老院长与神秘病人的对话埋下关键伏笔。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月07日 16:00</span>
+          <div class="rg-update-content">
+            <strong>《重生之我在豪门当保姆》</strong>
+            <p>更新第36集 · 女主收集到关键证据，豪门内部矛盾升级，反派开始露出破绽。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月06日 21:00</span>
+          <div class="rg-update-content">
+            <strong>《穿越之我在古代开外卖》</strong>
+            <p>更新第28集 · 主角的古代外卖生意遭同行嫉妒，一场商战在街头上演。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月06日 19:00</span>
+          <div class="rg-update-content">
+            <strong>《她的危险丈夫》</strong>
+            <p>更新第20集 · 女主翻出丈夫旧物中的第二部手机，通话记录指向意外之人。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月06日 15:30</span>
+          <div class="rg-update-content">
+            <strong>《病娇反派他又宠又撩》</strong>
+            <p>全集完结 · 番外篇同步上线，男女主现代篇小剧场给观众发糖。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月05日 20:30</span>
+          <div class="rg-update-content">
+            <strong>《我家夫人是隐藏大佬》</strong>
+            <p>全集完结 · 最终集女主身份全面公开，弹幕刷屏“爽到了”。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月05日 18:00</span>
+          <div class="rg-update-content">
+            <strong>《重回1998》</strong>
+            <p>更新第36集（大结局）· 主角与家人和解，时代变迁下的温情收尾。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月04日 21:00</span>
+          <div class="rg-update-content">
+            <strong>《深夜诊所》</strong>
+            <p>更新第23集 · 独立单元“失忆画家”篇上线，画作中的细节暗藏线索。</p>
+          </div>
+        </div>
+        <div class="rg-update-item">
+          <span class="rg-update-time">11月04日 17:00</span>
+          <div class="rg-update-content">
+            <strong>《闪婚后傅先生马甲藏不住了》</strong>
+            <p>更新第47集 · 女主意外撞见傅先生与神秘人会面，误会加深。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="rg-section" id="category-entry">
+      <div class="rg-section-header">
+        <h2>按类型找短剧 · 快速分类入口</h2>
+      </div>
+      <div class="rg-cat-grid">
+        <a href="/#hot-picks" class="rg-cat-item">都市逆袭</a>
+        <a href="/#hot-picks" class="rg-cat-item">古装甜宠</a>
+        <a href="/#hot-picks" class="rg-cat-item">悬疑推理</a>
+        <a href="/#hot-picks" class="rg-cat-item">甜虐交织</a>
+        <a href="/#hot-picks" class="rg-cat-item">重生复仇</a>
+        <a href="/#hot-picks" class="rg-cat-item">穿越搞笑</a>
+        <a href="/#hot-picks" class="rg-cat-item">年代情感</a>
+        <a href="/#hot-picks" class="rg-cat-item">家庭伦理</a>
+      </div>
+    </section>
+
+    <!-- 深度解析 -->
+    <section class="rg-section" id="deep-analysis">
+      <div class="rg-section-header">
+        <h2>红果短剧下载深度解析 · 类型与观看体验</h2>
+      </div>
+      <div class="rg-article-box">
+        <h3>短剧的题材特点与红果短剧下载热度</h3>
+        <p>
+          红果短剧下载之所以成为高频搜索词，与短剧本身的题材特性密切相关。短剧通常每集2-5分钟，剧情密度高、反转节奏快，前几秒就要抓住观众注意力。红果短剧平台上常见的题材包括都市逆袭、古装穿越、甜宠虐恋和悬疑推理等，这些类型天然适合碎片化消费。用户搜索红果短剧下载，往往是在社交平台或短视频应用看到片段后，希望找到完整剧集继续观看。相比传统长剧，短剧的入坑门槛更低，一部剧的完整体验可能只需要一两个小时，这也是下载需求集中的原因。
+        </p>
+        <h3>内容吸引点与节奏体验</h3>
+        <p>
+          在红果短剧下载相关讨论中，用户最常提到的是“节奏快”和“爽点密集”。短剧的叙事逻辑与传统影视不同，更强调即时情绪反馈。例如都市逆袭类短剧，往往在首集就完成主角身份的反转铺垫；甜宠类则会以高密度互动台词推进感情线。这种设计让观众在短时间内获得较强的娱乐满足。红果短剧平台在内容编排上也会根据用户反馈调整更新节奏，热门剧集通常保持日更或隔日更，维持追更热度。对于搜索红果短剧下载的用户来说，了解这些节奏特点有助于选择更适合自己时间安排的剧集。
+        </p>
+        <h3>人物设定与角色分析</h3>
+        <p>
+          短剧的人物塑造偏向功能化，但成功作品往往在有限篇幅内立住角色。例如《闪婚后傅先生马甲藏不住了》中，男主的“马甲”设定既是剧情悬念也是爽点来源；《病娇反派他又宠又撩》则通过病娇人设与穿书系统的组合制造反差萌。红果短剧下载榜单中，角色辨识度高的剧集更容易获得持续关注。观众在选择下载或观看时，可以留意主角人设是否合自己口味，比如偏爱强强对抗还是温柔治愈，这直接影响追剧体验。
+        </p>
+        <h3>适合人群与同类内容比较</h3>
+        <p>
+          短剧的核心受众是时间碎片化、偏爱快节奏叙事的用户群体，包括通勤族、学生和全职家庭人群。红果短剧下载相关搜索的高峰时段通常出现在晚间和周末，与碎片化观看习惯吻合。与长视频平台相比，短剧在单集信息密度上更有优势，但制作体量相对轻量。如果你追求深度剧情和复杂人物弧光，可能需要挑选短剧中的口碑之作；如果只是想在休息间隙放松，多数热门短剧都能满足。红果短剧下载页面整理的类型标签和评分信息，可以帮助你快速判断一部剧是否符合预期。
+        </p>
+        <h3>观众搜索红果短剧下载时想了解什么</h3>
+        <p>
+          从搜索意图分析，用户关注红果短剧下载主要集中几点：哪些短剧值得看、在哪里能稳定观看、更新进度如何、有没有类型片单。本页面通过热门推荐、最新更新和分类入口覆盖了这些需求。此外，深度解析部分提供题材和节奏的拆解，帮助用户从“随便看看”过渡到“有目的地选剧”。对于短剧这种强娱乐属性的内容，减少试错成本是关键，红果短剧下载专题页的价值也在于此。
+        </p>
+      </div>
+    </section>
+
+    <!-- 体验指南 - 轻量说明 -->
+    <section class="rg-section" id="guide-section">
+      <div class="rg-section-header">
+        <h2>浏览与收藏指南</h2>
+      </div>
+      <div class="rg-article-box">
+        <p>
+          本页面围绕红果短剧下载整理内容，结构上分为热门推荐、最新更新、分类入口和深度解析等板块。你可以先通过分类入口锁定感兴趣的类型，再浏览热门推荐中的剧集简介和评分，快速判断是否值得追。最新更新区域按时间排列，适合已经入坑的用户追踪进度。页面适配移动端，通勤路上也能方便查看。如果看到感兴趣的剧集，可以通过顶部导航或分类锚点快速跳转，页面内推荐逻辑以短剧类型和热度为依据，帮助扩展浏览路径。收藏本页后，每次打开都能看到近期更新的短剧动态。
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="rg-section" id="faq-area">
+      <div class="rg-section-header">
+        <h2>红果短剧下载常见问题</h2>
+      </div>
+      <div class="rg-faq-grid">
+        <div class="rg-faq-item">
+          <div class="rg-faq-q">红果短剧下载后可以在哪些设备上观看？</div>
+          <div class="rg-faq-a">短剧内容通常针对移动端竖屏观看优化，下载后主要在智能手机上观看体验最佳。部分平台也支持平板，但横屏适配可能不如竖屏完整。建议优先在手机端使用，并确保系统版本支持相应的播放格式。</div>
+        </div>
+        <div class="rg-faq-item">
+          <div class="rg-faq-q">红果短剧下载的短剧一般每集多长时间？</div>
+          <div class="rg-faq-a">主流短剧单集时长在2到5分钟之间，少数剧情密度高的作品可能达到6-8分钟。整部剧集数通常在20到60集不等，总时长往往相当于一部电影或几集传统电视剧，适合分次观看。</div>
+        </div>
+        <div class="rg-faq-item">
+          <div class="rg-faq-q">哪些类型的短剧在红果短剧下载中比较受欢迎？</div>
+          <div class="rg-faq-a">从近期趋势看，都市逆袭、古装甜宠和悬疑推理是下载热度较高的类型。重生、穿越、马甲等元素也频繁出现在热门榜单中。观众偏好因年龄和观看场景而异，年轻用户偏爱甜宠和穿越，职场人群更关注逆袭和悬疑题材。</div>
+        </div>
+        <div class="rg-faq-item">
+          <div class="rg-faq-q">红果短剧下载的剧集更新速度如何？</div>
+          <div class="rg-faq-a">热门短剧通常保持日更或隔日更，部分完结剧集则采用一次性上线全集的方式。更新节奏取决于制作方安排，专题页的最新更新区域会整理近期变动，方便你判断追更节奏。连载中的剧集一般会在固定时间段更新。</div>
+        </div>
+        <div class="rg-faq-item">
+          <div class="rg-faq-q">第一次看短剧，从哪些作品入手比较合适？</div>
+          <div class="rg-faq-a">建议从口碑评分较高、题材接受度广的作品开始，比如都市甜宠类《闪婚后傅先生马甲藏不住了》或悬疑单元剧《深夜诊所》。前者节奏轻松、爽点明确，后者剧情紧凑、适合喜欢推理的观众。先看几集确认口味，再深入同类型作品。</div>
+        </div>
+        <div class="rg-faq-item">
+          <div class="rg-faq-q">红果短剧下载专题页会持续更新吗？</div>
+          <div class="rg-faq-a">页面会跟随短剧市场动态调整推荐内容和最新更新列表，热门剧集、新上线作品和完结信息都会同步整理。建议收藏本页，方便每次回来查看当前热门和更新进度。资讯区域也会补充行业相关动态。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="rg-section" id="user-comments">
+      <div class="rg-section-header">
+        <h2>用户短评 · 大家都在聊什么</h2>
+      </div>
+      <div class="rg-comment-list">
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">林</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">林小满</span>
+              <span class="rg-comment-date">11月06日</span>
+            </div>
+            <p class="rg-comment-text">《闪婚后傅先生》真的上头，本来只想看两集结果刷到凌晨。红果短剧下载页面推荐得挺准，评分也靠谱。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">陈</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">陈默</span>
+              <span class="rg-comment-date">11月05日</span>
+            </div>
+            <p class="rg-comment-text">《深夜诊所》的悬疑氛围在短剧里算很不错的，不过后面几集节奏有点拖，希望大结局能收住。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">周</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">周周不吃鱼</span>
+              <span class="rg-comment-date">11月05日</span>
+            </div>
+            <p class="rg-comment-text">最近短剧质量比之前好多了，红果短剧下载整理的类型分类很实用，我一般先看悬疑和逆袭类。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">赵</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">赵一鸣</span>
+              <span class="rg-comment-date">11月04日</span>
+            </div>
+            <p class="rg-comment-text">《病娇反派》完结了有点不舍，番外小剧场很甜。希望红果短剧下载能多推一些类似的穿书题材。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">杨</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">杨桃罐头</span>
+              <span class="rg-comment-date">11月04日</span>
+            </div>
+            <p class="rg-comment-text">《重生之我在豪门当保姆》前面很爽，中间有几集逻辑有点跳，不过整体还是值得追。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">吴</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">吴大鹏</span>
+              <span class="rg-comment-date">11月03日</span>
+            </div>
+            <p class="rg-comment-text">短剧下载还是得找对地方，这个页面整理的热门列表挺全，省得我自己去翻。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">郑</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">郑小茶</span>
+              <span class="rg-comment-date">11月03日</span>
+            </div>
+            <p class="rg-comment-text">有没有人觉得《她的危险丈夫》男主有点用力过猛？不过剧情确实抓人，一集接一集停不下来。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">孙</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">孙悟饭</span>
+              <span class="rg-comment-date">11月02日</span>
+            </div>
+            <p class="rg-comment-text">《穿越之我在古代开外卖》太适合下饭了，不用动脑子，笑点也自然，希望多出点这种轻松向的。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">李</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">李慢慢</span>
+              <span class="rg-comment-date">11月02日</span>
+            </div>
+            <p class="rg-comment-text">红果短剧下载的评分参考价值还行，我一般先看8.5分以上的，踩雷概率小很多。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">王</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">王铁柱</span>
+              <span class="rg-comment-date">11月01日</span>
+            </div>
+            <p class="rg-comment-text">《重回1998》结尾有点仓促，不过怀旧感做得很足，还是看完了。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">徐</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">徐小北</span>
+              <span class="rg-comment-date">10月31日</span>
+            </div>
+            <p class="rg-comment-text">最近刚入坑短剧，这个页面的分类入口很友好，不用自己一个个搜。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">何</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">何小鹿</span>
+              <span class="rg-comment-date">10月30日</span>
+            </div>
+            <p class="rg-comment-text">《我家夫人是隐藏大佬》完结撒花，最后几集爽点拉满，就是感情线可以再多一点。</p>
+          </div>
+        </div>
+        <div class="rg-comment-item">
+          <div class="rg-comment-avatar">高</div>
+          <div class="rg-comment-body">
+            <div class="rg-comment-head">
+              <span class="rg-comment-name">高冷豆</span>
+              <span class="rg-comment-date">10月29日</span>
+            </div>
+            <p class="rg-comment-text">短剧看多了会发现套路都差不多，不过红果短剧下载页面推荐的几部还是有点新意的。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="rg-section" id="news-feed">
+      <div class="rg-section-header">
+        <h2>短剧资讯 · 红果短剧下载相关动态</h2>
+      </div>
+      <div class="rg-news-grid">
+        <article class="rg-news-card">
+          <div class="rg-news-date">2026年11月06日</div>
+          <h3 class="rg-news-title">红果短剧11月片单出炉：古装甜宠占比上升</h3>
+          <p class="rg-news-summary">本月红果短剧下载热门榜单中，古装甜宠类作品数量较上月增长明显，穿越与重生元素仍是主流。多部新剧上线首周即进入热度前十。</p>
+        </article>
+        <article class="rg-news-card">
+          <div class="rg-news-date">2026年11月05日</div>
+          <h3 class="rg-news-title">《闪婚后傅先生马甲藏不住了》单集播放创新高</h3>
+          <p class="rg-news-summary">该剧第46集上线后，红果短剧下载相关搜索量同步上涨，观众对马甲揭晓剧情的讨论热度持续走高，成为近期都市甜宠类代表作品。</p>
+        </article>
+        <article class="rg-news-card">
+          <div class="rg-news-date">2026年11月04日</div>
+          <h3 class="rg-news-title">悬疑短剧《深夜诊所》口碑走高，单元剧形式受关注</h3>
+          <p class="rg-news-summary">该剧采用一集一病例的叙事结构，主线暗线穿插，吸引了不少偏好推理内容的观众。红果短剧下载页面近期新增悬疑分类入口。</p>
+        </article>
+        <article class="rg-news-card">
+          <div class="rg-news-date">2026年11月03日</div>
+          <h3 class="rg-news-title">短剧行业观察：单集时长与更新节奏正在变化</h3>
+          <p class="rg-news-summary">部分制作方开始尝试将单集时长从3分钟延长至5-6分钟，以容纳更完整的情节推进。红果短剧下载用户对内容厚度的要求有所提升。</p>
+        </article>
+        <article class="rg-news-card">
+          <div class="rg-news-date">2026年11月02日</div>
+          <h3 class="rg-news-title">《病娇反派他又宠又撩》完结，番外篇同步上线</h3>
+          <p class="rg-news-summary">该剧以穿书系统加病娇人设的设定获得关注，完结后官方放出番外篇满足观众需求。红果短剧下载相关讨论中，该剧评分稳定在8.9分。</p>
+        </article>
+        <article class="rg-news-card">
+          <div class="rg-news-date">2026年11月01日</div>
+          <h3 class="rg-news-title">红果短剧下载专题页新增“按更新状态筛选”入口</h3>
+          <p class="rg-news-summary">为方便用户区分连载与完结剧集，页面分类入口新增更新状态维度，可快速筛选正在更新或已完结的短剧。相关热门标签同步优化。</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="rg-footer">
+    <div class="rg-container">
+      <div class="rg-footer-inner">
+        <div class="rg-footer-brand">
+          <div class="rg-logo">
+            <span class="rg-logo-icon">果</span>
+            <span>红果短剧下载</span>
+          </div>
+          <p>本页面为短剧内容聚合与推荐专题，所有剧集信息整理自公开渠道，旨在为短剧爱好者提供参考。红果短剧下载相关服务请以官方应用商店或正规平台为准。</p>
+        </div>
+        <div class="rg-footer-links">
+          <div class="rg-footer-col">
+            <h4>快速导航</h4>
+            <ul>
+              <li><a href="/#hot-picks">热门推荐</a></li>
+              <li><a href="/#latest-update">最新更新</a></li>
+              <li><a href="/#category-entry">分类入口</a></li>
+              <li><a href="/#deep-analysis">深度解析</a></li>
+            </ul>
+          </div>
+          <div class="rg-footer-col">
+            <h4>帮助与反馈</h4>
+            <ul>
+              <li><a href="/#faq-area">常见问题</a></li>
+              <li><a href="/#user-comments">用户评论</a></li>
+              <li><a href="/#news-feed">相关资讯</a></li>
+              <li><a href="/#guide-section">浏览指南</a></li>
+            </ul>
+          </div>
+          <div class="rg-footer-col">
+            <h4>友情链接</h4>
+            <ul>
+              <li><a href="/#hot-picks">短剧资源站</a></li>
+              <li><a href="/#hot-picks">影视资讯站</a></li>
+              <li><a href="/#hot-picks">剧集推荐站</a></li>
+              <li><a href="/#hot-picks">内容合作</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="rg-footer-bottom">
+        <span>© 2026 红果短剧下载专题页 · 内容仅供参考</span>
+        <span>本站不提供直接下载文件，信息整理自公开渠道</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+          </html>
